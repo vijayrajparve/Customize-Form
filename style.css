@@ -1,0 +1,98 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+#signatureCanvas {
+    width: 100%; /* Full width of the parent container */
+    height: auto; /* Adjust height proportionally */
+    max-width: 500px; /* Optional: Limit maximum width */
+    aspect-ratio: 5 / 1; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Optional: Add border for better visibility */
+    background-color: #f9f9f9; /* Optional: Add background color */
+}
+
+/* Ensure canvas adjusts properly on smaller screens */
+@media screen and (max-width: 768px) {
+    #signatureCanvas {
+        max-width: 100%; /* Use full width on mobile */
+    }
+}
+
+body {
+    font-size: 12px;
+}
+
+/* General Form Styling */
+form {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Flexbox for Labels and Inputs */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.row .col {
+    flex: 1;
+    min-width: 300px; /* Adjust based on the smallest screen size */
+}
+
+/* Align label and input */
+.mb-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align inputs with multi-line labels */
+    gap: 10px;
+}
+
+/* Label Styling */
+label {
+    flex: 0 0 auto; /* Prevent shrinking but allow wrapping */
+    margin-bottom: 5px; /* Add spacing for multi-line appearance */
+    white-space: normal; /* Allow text wrapping */
+    width: 100%; /* Ensure labels take up the full width */
+}
+
+/* Input Styling */
+input, textarea, select {
+    flex: 1; /* Take up remaining space */
+    min-width: 0; /* Prevent overflow */
+}
+
+/* Adjust for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack items vertically */
+    }
+    .row .col {
+        min-width: 100%; /* Full-width for mobile */
+    }
+    .mb-1 {
+        flex-direction: column; /* Stack label and input vertically */
+        align-items: flex-start; /* Align to the left */
+    }
+    .form-check {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .form-check-inline {
+        margin-bottom: 5px;
+    }
+    #signatureCanvas {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+
+
